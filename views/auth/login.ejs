@@ -1,0 +1,18 @@
+<section class="login flex items-center justify-center flex-col py-16 h-full">
+    <div class="form-wrapper container p-6 w-1/3 rounded">
+        <h1 class="lg:text-2xl text-xl py-6 text-center"> Login to our website</h1>
+        <% if(messages){%>
+            <h1 class="text-red-500"> <%= messages.error%></h1>
+        <%}%>    
+        <form class="flex flex-col text-xs md:text-sm " action="/login" method="POST">
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" class="my-2 rounded"/>
+            <label for="password">Password</label>
+            <input  id="password" type="password" name="password" class="my-2 rounded"/>
+           
+            <button class="sub-btn my-2 rounded py-1 w-20 mx-auto">Login</button>
+        </form>
+    </div>
+
+   
+</section>

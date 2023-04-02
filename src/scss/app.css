@@ -1,0 +1,54 @@
+.register, .login {
+  background-color: #CBE4DE;
+}
+.register .form-wrapper, .login .form-wrapper {
+  background-color: #F5F5F5;
+}
+
+.sub-btn {
+  background-color: #0E8388;
+  color: #CBE4DE;
+}
+.sub-btn:hover {
+  background-color: #2E4F4F;
+}
+
+.chatBox-wrapper {
+  background-color: #0E8388;
+}
+
+.input-wrapper {
+  background-color: #28666e;
+}
+
+.textBox {
+  background-color: #F5F5F5;
+}
+
+.sent {
+  float: right;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.received {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+body {
+  background-color: #CBE4DE;
+}
+
+button {
+  transition: all 0.5s ease-in-out;
+}
+
+input {
+  outline-color: #0E8388;
+  border: 1px solid #0E8388;
+}
+
+.icon {
+  color: #0E8388;
+}/*# sourceMappingURL=app.css.map */

@@ -1,0 +1,18 @@
+.register,.login{
+    background-color: $white;
+    
+    & .form-wrapper{
+        background-color: $smoke;
+    }
+}
+
+
+
+.sub-btn{
+    background-color: $primary;
+    color:$white;
+
+    &:hover{
+        background-color: $secondary;
+    }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    
+    <!-- css file -->
+    <link rel="stylesheet" type="text/css" href="css/app.css"/>
+    <!-- line-awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css" integrity="sha512-vebUliqxrVkBy3gucMhClmyQP9On/HAWQdKDXRaAlb/FKuTbxkjPKUyqVOxAcGwFDka79eTF+YXwfke1h3/wfg==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
+
+    <!-- tailwind cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Chat Bot</title>
+
+</head>
+<body class="box-borde">
+    <div class="nav-wrapper  bg-white">
+        <nav class="flex  mx-auto items-center container justify-between py-4 "> 
+        
+            <div class="icon">
+                <a href="/" class="px-2"> <i class="las la-cat text-4xl"></i></a>
+            </div>
+
+
+            <div class="text-sm md:text-base">
+                <%if(!user){%>
+                    
+                        <a href="/register" class="px-2"> Register</a>
+                        <a href="/login" class="px-2"> Login </a>
+                    
+                <%}else{%>  
+                        <a href="/logout" class="px-2">Logout</a>    
+                <%}%>
+            </div>
+    </nav>
+    </div>
+
+   <%- body%>
+</body>
+<script src="/socket.io/socket.io.js"> </script>
+
+<script src="https://cdn.jsdelivr.net/npm/tailwind-scrollbar@3.0.0/src/index.min.js"></script>
+
+
+<script src="js/app.js"></script>
+
+
+
+</html>

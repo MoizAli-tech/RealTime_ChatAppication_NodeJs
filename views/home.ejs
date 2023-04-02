@@ -1,0 +1,61 @@
+<section class="home container">
+
+    <div class="">
+        <div class="mt-10 mx-auto flex  flex-col  w-1/2 h-96">
+
+            <div class="text-sm bar bg-white p-2 w-full md:flex md:justify-between rounded-t-lg ">
+                <div class="appName">Chatty</div> 
+                <div> <%= user.email%></div>
+            </div>
+    
+            <div class="chatBox-wrapper scrollbar scrollbar-thumb-white scrollbar-track-red h-full flex  flex-col overflow-auto">
+                <div class="chatBox " data-user="<%= JSON.stringify(user.email) %>" >                 
+                </div>
+    
+               
+    
+                <% if(conversation){%>
+                    <%for(let item of conversation){%>
+                    <div class="chatBox w-full h-fit my-2.5  ">
+                        <div class="textBox text-xs md:text-base p-2 max-w-sm  <%= user.email == item.sender? 'sent':'received' %>">
+                            <p >From:  <%=item.sender%></p>
+                            <p>To: <%=item.receiver%></p>
+                            <%= item.message%>
+                            
+                        </div>
+                    </div>
+                    <%}%>
+                <%}%>
+            </div>
+    
+        </div>
+    
+        <div class="input-wrapper text-xs md:text-sm p-2  mx-auto mb-6 pb-2 rounded-b-lg w-1/2">
+            <form  class="flex flex-col">
+                <%if(messages.error){%>
+                    <span class="text-red-500"><%= messages.error%></span>
+                <%}%>
+                <div>
+                    <input type="text" id="email" 
+                    value="<%=session.receiver? session.receiver:''%>"
+                    name="email" 
+                    placeholder="enter email" 
+                    class="rounded-md p-1 mb-2  outline-none overflow-auto placeholder:p-2"/>
+                    <button id="receiverBtn" class="bg-white px-2 py-1 rounded-md text-xs md:text-sm ml-2  ">set receiver</button>
+                </div>
+                
+               
+                <textarea id="message" class="outline-none p-2 rounded-md  " name="textArea" rows="2" cols="50"></textarea>
+                <div class="mx-auto">
+                    <button id="send" class="bg-white  w-auto px-2 py-1 rounded-md text-xs md:text-sm ml-2 mt-4 ">Send</button>
+                </div>
+            </form>
+    
+        </div>
+
+    </div>
+
+
+
+
+</section>
